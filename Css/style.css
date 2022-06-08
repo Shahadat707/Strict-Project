@@ -143,29 +143,36 @@ header {
 .pure_design h1 {
 
     color: #2d3950;
-    font-size: 51px;
+
+    font-size: 35px;
+
     text-align: center;
+
     margin-bottom: 30px;
 }
 
 .pure_design p {
 
-    font-size: 23px;
+    font-size: 16px;
 
     text-align: center;
+
     word-spacing: 2px;
+
     color: #999999;
 }
 
 .featured {
 
     width: 80%;
-    height: 340px;
+
+    height: 320px;
+
     margin: auto;
 
     display: flex;
+
     justify-content: space-evenly;
-    /* padding-bottom: 80px; */
 }
 
 .item {
@@ -180,12 +187,34 @@ header {
 
 .icon {
 
-    height: 71px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 90px;
+
     width: 90px;
-    background-color: #15a4fa;
+
+    background-color:
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;202 */
+        background: #1e5799;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#7db9e8', GradientType=1);
+    /* IE6-9 */
+
+
     font-size: 35px;
+
     text-align: center;
-    padding-top: 19px;
+
     margin: auto;
     border-radius: 3px;
     color: white;
@@ -193,13 +222,13 @@ header {
 
 .item h3 {
     color: #2d3950;
-    font-size: 30px;
+    font-size: 25px;
     padding: 10px 0;
 }
 
 .item p {
     color: #999999;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .showcase {
@@ -211,21 +240,23 @@ header {
 .showcase_header {
 
     width: 80%;
-    height: 200px;
+
+    height: 150px;
 
     margin: auto;
+
     text-align: center;
 }
 
 .showcase_header h1 {
     color: #2d3950;
-    font-size: 50px;
-    padding: 30px;
+    font-size: 35px;
+    padding: 30px 0 10px 0;
 }
 
 .showcase_header p {
     color: #999999;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .showcase_item {
@@ -241,6 +272,7 @@ header {
 .showcase_photo {
     width: 32%;
     height: 100%;
+    position: relative;
 }
 
 .showcase_photo img {
@@ -249,32 +281,21 @@ header {
     height: 100%;
 }
 
-.showcase_icon {
-    width: 100%;
-    color: white;
-    position: relative;
-    left: 50%;
-    bottom: 50%;
-    transform: translate(-50%, 50%);
-    transition: .3s all ease-in-out;
-}
 
-.showcase_icon ul {
 
-    width: 60px;
-    height: 24px;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+.showcase_photo::before {
+    content: '';
     position: absolute;
-    left: 50%;
-    bottom: 50%;
-    transform: translate(-50%, 50%);
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #15a4fa;
+
+    transition: .4s all ease-in-out;
 }
 
-.showcase_icon ul li {
-
-    border-radius: 3px;
-    border: 2px solid white;
-    list-style: none;
+.showcase_photo:hover::before {
+    opacity: .5;
 }
